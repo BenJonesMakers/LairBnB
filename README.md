@@ -1,4 +1,4 @@
-LairBnB
+## LairBnB
 
 ## Team Members
 Paris Higgins
@@ -21,11 +21,6 @@ $ git fetch upstream
   From https://github.com/BenJonesMakers/LairBnB
   * [new branch]      main       -> upstream/main
 
-$ git fetch upstream
-
-$ LairBnB student$ git checkout main
-  Already on 'main'
-  Your branch is up to date with 'origin/main'.
 
 $ git merge upstream/main
   Updating 1d9f964..cfed183
