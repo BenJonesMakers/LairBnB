@@ -9,4 +9,8 @@ class DatabaseConnection
   def self.query(sql)
     @connection.exec(sql)
   end
+
+  def self.all
+    @connection.exec("SELECT * FROM spaces;")
+  end
 end

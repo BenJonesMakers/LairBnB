@@ -1,0 +1,11 @@
+<h1>Hidden Lairs</h1>
+<form action="/spaces/new" method="get">
+<button type="submit" name="Add Space">Add Space</button>
+</form>
+
+
+<ul>
+  <% @space.each do |space| %>
+  <li><%= space.name %></li>
+  <% end %>
+</ul>
