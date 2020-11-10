@@ -1,11 +1,6 @@
-# frozen_string_literal: true
-
 require 'sinatra/base'
-<<<<<<< HEAD
 require './lib/space'
-=======
 
->>>>>>> upstream/main
 class LairBnB < Sinatra::Base
 
   get '/test' do
