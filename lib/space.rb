@@ -1,4 +1,6 @@
-require 'database_connection'
+require_relative 'database_connection'
+require_relative 'database_check'
+
 class Space
 attr_reader :id, :name, :description, :price, :startdate, :enddate
 
