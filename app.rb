@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 require 'sinatra/base'
+
 class LairBnB < Sinatra::Base
   get '/test' do
     'Hello World'
