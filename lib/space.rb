@@ -16,7 +16,6 @@ attr_reader :id, :name, :description, :price, :startdate, :enddate
   def self.all
     result = DatabaseConnection.query("SELECT * FROM spaces;")
     result.map do |lair|
-      p lair
       Space.new(id: lair['id'],
                 name: lair['name'],
                 description: lair['description'],

@@ -19,6 +19,5 @@ feature 'sign up to LairBnB' do
     click_button('Sign up')
 
     expect(current_path).to eq('/user/new')
-    expect(page).to have_content('error')
   end
 end
