@@ -20,8 +20,8 @@ attr_reader :id, :name, :description, :price, :startdate, :enddate
     end
   end
 
-  def self.add(name)
-    DatabaseConnection.query("INSERT INTO spaces (name) VALUES ('#{name}');")
+  def self.add(name, startdate)
+    DatabaseConnection.query("INSERT INTO spaces (name, startdate) VALUES ('#{name}', '#{startdate}');")
   end
 
 end

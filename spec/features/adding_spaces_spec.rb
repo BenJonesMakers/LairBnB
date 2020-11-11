@@ -11,4 +11,5 @@ feature 'adding a space' do
     expect(page).to have_content("Deathstar")
 
   end
+
 end
