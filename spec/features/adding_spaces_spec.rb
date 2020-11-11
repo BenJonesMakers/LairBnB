@@ -14,4 +14,5 @@ feature 'adding a space' do
     expect(page).to have_content("The description")
     expect(page).to have_content("10")
   end
+
 end
