@@ -45,4 +45,26 @@ describe Space do
     end
   end
 
+  describe '#availability' do
+    it 'respond to .availability' do
+      space = Space.new(id: "1",
+                        name: "Deathstar",
+                        description: "excellent views from the star destroyer.",
+                        price: "39",
+                        startdate: Time.now,
+                        enddate: Time.now)
+      expect(space).to respond_to(:availability)
+    end
+
+    it 'returns an array containg hashes for the days of the month' do
+      space = Space.new(id: "1",
+                        name: "Deathstar",
+                        description: "excellent views from the star destroyer.",
+                        price: "39",
+                        startdate: '11-11-2020',
+                        enddate: '13-11-2020')
+      expect(space.availability(11, 2020)).to eq [11, 12, 13]
+    end
+  end
+
 end
