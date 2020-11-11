@@ -14,10 +14,14 @@ describe Space do
 
   describe '.add' do
     it "adds a space to the list" do
-      Space.add("Deathstar")
+      Space.add(name: "Deathstar", description: "The description", price: "10")
       spaces = Space.all
-      #expect(spaces).to be_a Space
+      p spaces[0]
+
       expect(spaces[0].name).to include("Deathstar")
+      expect(spaces[0].description).to eq "The description"
+      expect(spaces[0].price).to eq "10"
+
     end
   end
 
