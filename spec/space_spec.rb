@@ -9,7 +9,6 @@ describe Space do
       spaces = Space.all
 
       expect(spaces[0].name).to include("Deathstar")
-
     end
   end
 
