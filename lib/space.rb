@@ -16,12 +16,13 @@ attr_reader :id, :name, :description, :price, :startdate, :enddate
   def self.all
     result = DatabaseConnection.query("SELECT * FROM spaces;")
     result.map do |lair|
+      p lair
       Space.new(id: lair['id'], name: lair['name'], description: lair['description'], price: lair['price'], startdate: lair['startdate'], enddate: lair['enddate'])
     end
   end
 
-  def self.add(name, startdate)
-    DatabaseConnection.query("INSERT INTO spaces (name, startdate) VALUES ('#{name}', '#{startdate}');")
+  def self.add(name:, description:, price:, startdate:, enddate:)
+    DatabaseConnection.query("INSERT INTO spaces (name, description, price) VALUES ('#{name}', '#{description}', '#{price}', '#{startdate}', '#{enddate}');")
   end
 
 end

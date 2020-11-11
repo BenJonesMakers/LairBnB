@@ -16,10 +16,10 @@ describe DatabaseConnection do
       DatabaseConnection.query('SELECT * FROM spaces;')
     end
 
-    it "adds row to test database" do
-      add_row_to_test_database()
-      result = DatabaseConnection.query('SELECT * FROM spaces;')
-      expect(result.count).to eq 1
-    end
+    # it "adds row to test database" do
+    #   add_row_to_test_database()
+    #   result = DatabaseConnection.query('SELECT * FROM spaces;')
+    #   expect(result.count).to eq 1
+    # end
   end
 end
