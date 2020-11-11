@@ -13,7 +13,11 @@ class LairBnB < Sinatra::Base
   end
 
   post '/spaces' do
-    Space.add(name: params[:name])
+    Space.add(name: params[:name],
+              description: params[:description],
+              price: params[:price],
+              startdate: params[:startdate],
+              enddate: params[:enddate])
     redirect '/spaces'
   end
 

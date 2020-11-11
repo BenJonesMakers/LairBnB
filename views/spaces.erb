@@ -6,6 +6,11 @@
 
 <ul>
   <% @space.each do |space| %>
-  <li><%= space.name %></li>
+    Lair: <li><%= space.name %></li>
+    Description: <li><%= space.description %></li>
+    Price: <li><%= space.price %></li>
+    Start Date: <li><%= space.startdate %></li>
+    End Date: <li><%= space.enddate %></li>
+    <br>
   <% end %>
 </ul>
