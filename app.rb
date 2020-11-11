@@ -25,5 +25,13 @@ class LairBnB < Sinatra::Base
     erb :new
   end
 
+  post '/spaces/pick_a_date' do
+    p params
+
+    @id = params[:id]
+    p @id
+    erb :pick_a_date
+  end
+
   run! if app_file == $0
 end

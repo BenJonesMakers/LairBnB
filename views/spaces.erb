@@ -6,11 +6,14 @@
 
 <ul>
   <% @space.each do |space| %>
+  <form action="/spaces/pick_a_date" method="post">
     Lair: <li><%= space.name %></li>
     Description: <li><%= space.description %></li>
     Price: <li><%= space.price %></li>
     Start Date: <li><%= space.startdate %></li>
     End Date: <li><%= space.enddate %></li>
+    <button type="submit" name="id" value="<%= space.id %>">Pick</button>
+  </form>
     <br>
   <% end %>
 </ul>

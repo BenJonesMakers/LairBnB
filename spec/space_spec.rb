@@ -26,7 +26,7 @@ describe Space do
       expect(spaces[0].description).to eq "The description"
       expect(spaces[0].price).to eq "10"
       expect(spaces[0].startdate).to eq "2020-01-01"
-      expect(spaces[0].enddate).to eq "2020-01-02"
+      expect(spaces[0].enddate).to eq "2020-02-01"
 
     end
 
