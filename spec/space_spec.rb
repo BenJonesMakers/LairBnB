@@ -7,8 +7,6 @@ describe Space do
       spaces = Space.all
 
       expect(spaces[0].name).to include("Deathstar")
-      # expect(spaces).to include("Moonraker")
-      # expect(spaces).to include("Ice hotel")
     end
   end
 
