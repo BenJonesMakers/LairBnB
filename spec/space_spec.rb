@@ -4,6 +4,8 @@ describe Space do
 
   describe '.all' do
     it "shows a list of all spaces" do
+
+      add_row_to_test_database()
       spaces = Space.all
 
       expect(spaces[0].name).to include("Deathstar")
@@ -17,7 +19,7 @@ describe Space do
             description: "The description",
             price: "10",
             startdate: "01/01/2020",
-            enddate: "31/01/2020")
+            enddate: "02/01/2020")
       spaces = Space.all
       p spaces[0]
 
@@ -25,7 +27,7 @@ describe Space do
       expect(spaces[0].description).to eq "The description"
       expect(spaces[0].price).to eq "10"
       expect(spaces[0].startdate).to eq "2020-01-01"
-      expect(spaces[0].enddate).to eq "2020-01-31"
+      expect(spaces[0].enddate).to eq "2020-01-02"
 
     end
 
