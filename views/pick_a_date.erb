@@ -1,3 +1,13 @@
 <h2>Pick a date</<h2>
-
-  Lair Name:  "<%= @lair.name %>"
+<br>
+Lair Name:  "<%= @lair.name %>"<br>
+<form action="/space/request_lair" method="post">
+<ul>
+<% @available_days.each do | day | %>
+  <li>
+    <%= day %>
+  </li>
+  <% end %>
+</ul>
+<button type="submit" name="submit">Request to Book</button>
+</form>

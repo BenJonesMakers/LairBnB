@@ -26,8 +26,11 @@ class LairBnB < Sinatra::Base
   end
 
   post '/spaces/pick_a_date' do
-    # @id = params[:id]
     @lair = Space.specific_space(params[:id])
+    @available_days = @lair.availability(11, 2020)
+    if @available_days == []
+      p "no availabe days found for #{@lair.name}"
+    end
     erb :pick_a_date
   end
 

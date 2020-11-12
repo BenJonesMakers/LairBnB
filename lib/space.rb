@@ -11,7 +11,6 @@ class Space
     @price = price
     @startdate = startdate
     @enddate = enddate
-
   end
 
   def self.all
@@ -53,7 +52,7 @@ class Space
     temp_array, number_of_days = [], 31
     day_count = 1
     while  day_count <= number_of_days
-      test_date = day_count.to_s + "-" + month.to_s + "-" + year.to_s
+      test_date = year.to_s + "-" + month.to_s + "-" + day_count.to_s
 
       if check_availability(test_date)
         temp_array.push(day_count)
@@ -61,6 +60,7 @@ class Space
 
       day_count += 1
     end
+    p temp_array
     return temp_array
   end
 

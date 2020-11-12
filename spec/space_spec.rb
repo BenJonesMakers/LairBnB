@@ -37,8 +37,8 @@ describe Space do
                         name: "Deathstar",
                         description: "excellent views from the star destroyer.",
                         price: "39",
-                        startdate: '11-11-2020',
-                        enddate: '13-11-2020')
+                        startdate: '2020-11-11',
+                        enddate: '2020-11-13')
 
       expect(space).to be_a Space
     end
@@ -50,8 +50,8 @@ describe Space do
                         name: "Deathstar",
                         description: "excellent views from the star destroyer.",
                         price: "39",
-                        startdate: '11-11-2020',
-                        enddate: '13-11-2020')
+                        startdate: '2020-11-11',
+                        enddate: '2020-11-13')
       expect(space).to respond_to(:availability)
     end
 
@@ -60,8 +60,8 @@ describe Space do
                         name: "Deathstar",
                         description: "excellent views from the star destroyer.",
                         price: "39",
-                        startdate: '11-11-2020',
-                        enddate: '13-11-2020')
+                        startdate: '2020-11-11',
+                        enddate: '2020-11-13')
       expect(space.availability(11, 2020)).to eq [11, 12, 13]
     end
   end
