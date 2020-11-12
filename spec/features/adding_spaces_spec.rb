@@ -1,13 +1,9 @@
 feature 'adding a space' do
   scenario "user can add a space to the list" do
-    visit('/spaces')
-    click_button "Add Space"
+    visit_spaces_click_add()
     expect(current_path).to eq('/spaces/new')
 
-    fill_in('name', with: "Deathstar")
-    fill_in('description', with: "The description")
-    fill_in('price', with: "10")
-    click_button "submit"
+    fill_in_name_desc_price()
 
     expect(current_path).to eq('/spaces')
     expect(page).to have_content("Deathstar")
