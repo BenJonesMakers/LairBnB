@@ -1,4 +1,19 @@
+
+
 body { background-color: lightblue;}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FF9900
+}
+
+li {
+  display: inline;
+}
+
 
 .container {
   text-align: center;
