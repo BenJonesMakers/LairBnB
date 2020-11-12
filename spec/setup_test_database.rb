@@ -5,7 +5,6 @@ def setup_test_database
   connection = PG.connect(dbname: 'lairbnb_test')
   connection.exec("TRUNCATE spaces;")
   connection.exec("TRUNCATE users;")
-
 end
 
 def add_row_to_test_database

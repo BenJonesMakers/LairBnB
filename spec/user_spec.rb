@@ -5,12 +5,9 @@ describe User do
     it "creates a new user" do
       user = User.create("email@email.com", "password")
       expect(user).to be_a User
-      setup_test_database()
-      add_row_to_test_database()
-      # expect(user[0].id).to eq id[0]['id']
       id = DatabaseConnection.query("SELECT id FROM users WHERE email ='email@email.com';")
       expect(user.email).to eq "email@email.com"
-      expect(user.id.to_i + 1).to eq id[0]['id'].to_i
+      expect(user.id).to eq id[0]['id']
     end
   end
 
