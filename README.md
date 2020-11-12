@@ -11,6 +11,7 @@ Ben Jones
 Shamarni Mcfarlane
 Grace Farren
 
+
 ## psql
 In order to run this we need a live database and a test database.
 CREATE DATABASE lairbnb_test

@@ -14,9 +14,29 @@ class LairBnB < Sinatra::Base
     'Hello World'
   end
 
+  post '/' do
+    redirect '/user/new'
+  end
+
   get '/user/new' do
     erb (:'user/new')
   end
+
+  get '/login' do
+    erb (:'user/login')
+  end
+
+  post '/login' do
+    if User.verification(params[:email], params[:password]) == false
+     flash[:notice] = "ERROR! Try re-enter email or password."
+     redirect '/login'
+    else
+      redirect '/homepage'
+    end
+  end
+  # user = User.verification(params[:email], params[:password])
+  # session[:user_id] = user.id
+  # prob need SESSION thing also to keep track
 
   post '/user' do
     User.create(params[:email], params[:password])

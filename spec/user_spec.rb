@@ -16,7 +16,6 @@ describe User do
     end
   end
 
-
   describe '.confirmation' do
     it "returns true if passwords match" do
       expect(User.confirmation("p1", "p1")).to eq true
@@ -25,4 +24,17 @@ describe User do
       expect(User.confirmation("p1", "p2")).to eq false
     end
   end
+
+  describe '.verification' do
+    it "returns false if the email is wrong" do
+      user = User.create("example@email", "password")
+      expect(User.verification("wrong@email.com", "password")).to eq false
+    end
+
+    it "returns false if password is wrong and email is correct" do # index out of range rspec?
+      user = User.create("email@email.com", "password")
+      expect(User.verification("email@email.com", "wrong")).to eq false
+    end
+  end
+
 end
