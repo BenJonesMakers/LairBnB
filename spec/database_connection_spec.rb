@@ -16,6 +16,12 @@ describe DatabaseConnection do
       DatabaseConnection.query('SELECT * FROM spaces;')
     end
 
+    it "it runs sql query on database, users table" do
+      connection = DatabaseConnection.setup('lairbnb_test')
+      expect(connection).to receive(:exec).with("SELECT * FROM users;")
+      DatabaseConnection.query('SELECT * FROM users;')
+    end
+
     # it "adds row to test database" do
     #   add_row_to_test_database()
     #   result = DatabaseConnection.query('SELECT * FROM spaces;')

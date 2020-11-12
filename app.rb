@@ -7,6 +7,19 @@ class LairBnB < Sinatra::Base
     'Hello World'
   end
 
+  get '/user/new' do
+    erb (:'user/new')
+  end
+
+  post '/user' do
+    redirect '/homepage'
+  end
+
+  get '/homepage' do
+    erb :homepage
+  end
+  # this page will have buttons to use the web
+
   get '/spaces' do
     @space = Space.all
     erb :spaces
