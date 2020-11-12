@@ -77,5 +77,16 @@ class LairBnB < Sinatra::Base
     erb :new
   end
 
+  post '/spaces/pick_a_date' do
+    @lair = Space.specific_space(params[:id])
+    @available_days = @lair.availability(11, 2020)
+    erb :pick_a_date
+  end
+
+  post '/space/request_lair' do
+    p params
+    erb :requests
+  end
+
   run! if app_file == $0
 end

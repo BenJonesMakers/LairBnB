@@ -3,15 +3,9 @@
 # I want to be able to offer a range of dates
 feature 'Host sets dates when adding the space' do
   scenario 'host sets start and end date' do
-    visit('/spaces')
-    click_button "Add Space"
+    visit_spaces_click_add()
     expect(current_path).to eq('/spaces/new')
-
-    fill_in('name', with: "Deathstar")
-    # expects DD/MM/YY
-    fill_in('startdate', with: '01/01/20')
-    fill_in('enddate', with: '31/01/20')
-    click_button "submit"
+    fill_in_name_and_dates()
     expect(current_path).to eq('/spaces')
     expect(page).to have_content '2020-01-01'
     # expect(page).to have_content '31/01/20'

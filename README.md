@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 ## LairBnB
-=======
-=======
-LairBnB
->>>>>>> upstream/main
 
 ## Team Members
 Paris Higgins
@@ -27,11 +22,3 @@ $ git remote add upstream https://github.com/BenJonesMakers/LairBnB.git
 $ git fetch upstream
 $ git checkout main
 $ git merge upstream/main
-<<<<<<< HEAD
-=======
-  Updating 1d9f964..cfed183
-  Fast-forward
-  README.md | 1 +
-  1 file changed, 1 insertion(+)
-
->>>>>>> upstream/main

@@ -1,0 +1,51 @@
+
+
+body { background-color: lightblue;}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FF9900
+}
+
+li {
+  display: inline;
+}
+
+
+.container {
+  text-align: center;
+  }
+
+.add_button {
+  color: rgb(255, 247, 246);
+  font-size: 18px;
+  line-height: 18px;
+  padding: 13px;
+  border-radius: 22px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  background: #FF9900;
+  border: 2px solid rgb(28, 110, 164);
+  display: inline-block;}
+.add_button:hover {
+  background: #1C6EA4; }
+.add_button:active {
+  background: #144E75; }
+
+.lairs {
+  display: inline-inline-block;
+  background-color: #FF7733;
+  margin-right: 50%;
+  padding: 20px 20px;
+  border: 5px
+  solid #1C6EA4;
+}
+.description { text-indent: 20px;}
+.price { text-indent: 30px;}
