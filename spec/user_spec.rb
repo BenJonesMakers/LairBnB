@@ -7,12 +7,10 @@ describe User do
       expect(user).to be_a User
       setup_test_database()
       add_row_to_test_database()
-
       # expect(user[0].id).to eq id[0]['id']
       id = DatabaseConnection.query("SELECT id FROM users WHERE email ='email@email.com';")
-      password = DatabaseConnection.query("SELECT password FROM users WHERE email ='email@email.com';")
       expect(user.email).to eq "email@email.com"
-      expect(user.id.to_i + 1).to eq (id[0]['id']).to_i
+      expect(user.id.to_i + 1).to eq id[0]['id'].to_i
     end
   end
 
@@ -27,12 +25,10 @@ describe User do
 
   describe '.verification' do
     it "returns false if the email is wrong" do
-      user = User.create("example@email", "password")
       expect(User.verification("wrong@email.com", "password")).to eq false
     end
 
     it "returns false if password is wrong and email is correct" do # index out of range rspec?
-      user = User.create("email@email.com", "password")
       expect(User.verification("email@email.com", "wrong")).to eq false
     end
   end

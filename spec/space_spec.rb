@@ -20,7 +20,6 @@ describe Space do
             startdate: "01/01/2020",
             enddate: "02/01/2020")
       spaces = Space.all
-      p spaces[0]
 
       expect(spaces[0].name).to include("Deathstar")
       expect(spaces[0].description).to eq "The description"

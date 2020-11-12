@@ -3,8 +3,6 @@ require 'sinatra/flash'
 require './lib/space'
 require './lib/user'
 
-
-
 class LairBnB < Sinatra::Base
 
   enable :sessions
@@ -14,29 +12,38 @@ class LairBnB < Sinatra::Base
     'Hello World'
   end
 
-  post '/' do
-    redirect '/user/new'
+  get '/user/new' do
+    erb :'user/new'
   end
 
-  get '/user/new' do
-    erb (:'user/new')
+  post '/user/new' do
+    erb :'user/new'
   end
 
   get '/login' do
-    erb (:'user/login')
+    erb :'user/login'
   end
 
   post '/login' do
     if User.verification(params[:email], params[:password]) == false
-     flash[:notice] = "ERROR! Try re-enter email or password."
-     redirect '/login'
+      flash[:notice] = "ERROR! Try re-enter email or password."
+      redirect '/login'
     else
+      user = User.verification(params[:email], params[:password])
+      session[:id] = user.id
       redirect '/homepage'
     end
   end
-  # user = User.verification(params[:email], params[:password])
-  # session[:user_id] = user.id
-  # prob need SESSION thing also to keep track
+
+  get '/logout' do
+    erb :'user/logout'
+  end
+
+  delete '/logout' do
+    flash[:notice] = "You are logged out now" # doesnt work
+    session.delete(:id)
+    redirect '/user/new'
+  end
 
   post '/user' do
     User.create(params[:email], params[:password])
@@ -51,7 +58,6 @@ class LairBnB < Sinatra::Base
   get '/homepage' do
     erb :homepage
   end
-  # this page will have buttons to use the web
 
   get '/spaces' do
     @space = Space.all
