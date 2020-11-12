@@ -1,0 +1,13 @@
+<h2>Pick a date</<h2>
+<br>
+Lair Name:  "<%= @lair.name %>"<br>
+<form action="/space/request_lair" method="post">
+  <h2> Available days in November, 2020 </h2>
+  <select name="days" id="day">
+    <% @available_days.each do | day | %>
+  <option value="<%= day %>"><%= day %></option>
+    <% end %>
+  </select>
+<input type="hidden" name="id" value="<%= @lair.id %>">
+<button type="submit" name="submit">Request to Book</button>
+</form>
