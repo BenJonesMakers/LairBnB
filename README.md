@@ -6,12 +6,15 @@ Ben Jones
 Shamarni Mcfarlane
 Grace Farren
 
+
 ## psql
 In order to run this we need a live database and a test database.
 CREATE DATABASE lairbnb_test
 run sql script in db/migrations/01_create_lairbnb_table.sql
+run sql script in db/migrations/03_create_user_table.sql
 CREATE DATABASE lairbnb
 run sql script in db/migrations/01_create_lairbnb_table.sql
+run sql script in db/migrations/03_create_user_table.sql
 
 
 ## Git repo sharing

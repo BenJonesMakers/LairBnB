@@ -1,18 +1,7 @@
-<h1>Welcome!</h1>
-
-<!-- <form action="/user/new">
-    <button class="submit-button">Log out here</button>
-</form> -->
-<form action='/spaces' method="get">
-  <input type="submit" value="View Spaces"/>
-</form>
-
-
 <form action='/user/new' method="get">
   <input name="_method" type="hidden" value="delete"/>
   <input type="submit" value="Logout"/>
 </form>
-
 
 <% flash.keys.each do |type| %>
   <div data-alert class="flash <%= type %> alert-box radius">

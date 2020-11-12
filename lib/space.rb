@@ -16,7 +16,6 @@ class Space
   def self.all
     result = DatabaseConnection.query("SELECT * FROM spaces;")
     result.map do |lair|
-      p lair
       Space.new(id: lair['id'],
                 name: lair['name'],
                 description: lair['description'],
@@ -27,6 +26,7 @@ class Space
   end
 
   def self.add(name:, description:, price:, startdate:, enddate:)
+
     DatabaseConnection.query("INSERT INTO spaces
                             (name, description, price, startdate, enddate)
                             VALUES ('#{name}',
