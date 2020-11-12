@@ -1,16 +1,31 @@
-<h1>Hidden Lairs</h1>
-<form action="/spaces/new" method="get">
-<button type="submit" name="Add Space">Add Space</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/spaces.css">
+</head>
+
+<body>
+  <h1>Hidden Lairs</h1>
+  <form action="/spaces/new" method="get">
+    <div class="container">
+      <button class="add_button" type="submit" name="Add Space">Add Space</button>
+    </div>
+  </form>
 
 
-<ul>
-  <% @space.each do |space| %>
-    Lair: <li><%= space.name %></li>
-    Description: <li><%= space.description %></li>
-    Price: <li><%= space.price %></li>
-    Start Date: <li><%= space.startdate %></li>
-    End Date: <li><%= space.enddate %></li>
-    <br>
-  <% end %>
-</ul>
+  <ul>
+    <% @space.each do |space| %>
+    <div class="lairs">
+      <h3><%= space.name %></h3>
+      <article class="description"><%= space.description %></article>
+      <br>
+      <article class="price">£<%= space.price %></article>
+      <br>
+      <%# <%= space.startdate %>
+      <%# <%= space.enddate %>
+    </div>
+      <br>
+    <% end %>
+  </ul>
+
+</body>
