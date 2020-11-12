@@ -37,9 +37,20 @@ class Space
                                     '#{enddate}');")
   end
 
+  def self.specific_space(id)
+    result = DatabaseConnection.query("SELECT * FROM spaces WHERE id = #{id};")
+    result.map do |lair|
+      return Space.new(id: lair['id'],
+                name: lair['name'],
+                description: lair['description'],
+                price: lair['price'],
+                startdate: lair['startdate'],
+                enddate: lair['enddate'])
+    end
+  end
+
   def availability(month, year)
-    temp_array = []
-    number_of_days = 31
+    temp_array, number_of_days = [], 31
     day_count = 1
     while  day_count <= number_of_days
       test_date = day_count.to_s + "-" + month.to_s + "-" + year.to_s

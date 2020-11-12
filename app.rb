@@ -26,10 +26,8 @@ class LairBnB < Sinatra::Base
   end
 
   post '/spaces/pick_a_date' do
-    p params
-
-    @id = params[:id]
-    p @id
+    # @id = params[:id]
+    @lair = Space.specific_space(params[:id])
     erb :pick_a_date
   end
 

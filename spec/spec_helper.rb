@@ -3,6 +3,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 require 'setup_test_database'
+require_relative './web_helper'
 
 # Set the environment to "test"
 ENV['ENVIRONMENT'] = 'test'
