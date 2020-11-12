@@ -60,7 +60,6 @@ class Space
 
       day_count += 1
     end
-    p temp_array
     return temp_array
   end
 
