@@ -12,8 +12,9 @@ feature 'show the calendar, select a date and then submit' do
     # fill_in('month', with: '1')
     p page.body
     expect(page).to have_content "Pick a date"
-    expect(page).to have_content "13"
-    click_button('13')
+    # expect(page).to have_content "13"
+    select('13', from: 'days')
+    # click_button('13')
     click_button('Request to Book')
     expect(page).to have_content "Requests"
   end

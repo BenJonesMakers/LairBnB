@@ -2,12 +2,12 @@
 <br>
 Lair Name:  "<%= @lair.name %>"<br>
 <form action="/space/request_lair" method="post">
-<ul>
-<% @available_days.each do | day | %>
-  <li>
-    <%= day %>
-  </li>
-  <% end %>
-</ul>
+  <h2> Available days in November, 2020 </h2>
+  <select name="days" id="days">
+    <% @available_days.each do | day | %>
+  <option value="<%= day %>"><%= day %></option>
+    <% end %>
+  </select>
+
 <button type="submit" name="submit">Request to Book</button>
 </form>
