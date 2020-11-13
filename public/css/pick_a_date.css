@@ -1,0 +1,67 @@
+
+
+body { background-color: lightblue;}
+
+.death_star {
+  background-image: url("/images/death_star.jpeg");
+}
+
+.ice_hotel {
+  background-image: url("/images/ice_hotel.jpg");
+}
+
+.tracy_island {
+  background-image: url("/images/tracy_island.jpg");
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FF9900
+}
+
+li {
+  display: inline;
+}
+
+.lairs {
+
+  display: inline-inline-block;
+  background-color: #FF7733;
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-top: 200px;
+  padding: 20px 20px;
+  border: 5px
+  solid #1C6EA4;
+}
+
+.container {
+  text-align: center;
+  }
+
+.request_button {
+  color: rgb(255, 247, 246);
+  font-size: 18px;
+  line-height: 18px;
+  padding: 13px;
+  border-radius: 22px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  background: #FF9900;
+  border: 2px solid rgb(28, 110, 164);
+  display: inline-block;}
+.request_button:hover {
+  background: #1C6EA4; }
+.request_button:active {
+  background: #144E75; }
+
+
+.description { text-indent: 20px;}
+.price { text-indent: 30px;}
