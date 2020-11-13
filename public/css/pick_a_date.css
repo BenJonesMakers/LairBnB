@@ -14,6 +14,10 @@ body { background-color: lightblue;}
   background-image: url("/images/tracy_island.jpg");
 }
 
+.hell_hall {
+  background-image: url("/images/hell_hall.jpg");
+}
+
 .nav {
   list-style-type: none;
   margin: 0;
