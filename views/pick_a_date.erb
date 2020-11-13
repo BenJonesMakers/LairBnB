@@ -27,6 +27,8 @@
                 <% end %>
             </select>
           <input type="hidden" name="id" value="<%= @lair.id %>">
+          <input type="hidden" name="month" value="<%= @month_text %>">
+          <input type="hidden" name="year" value="<%= @year %>">
           <button class="request_button" type="submit" name="submit">Request to Book</button>
         </form>
     </div>
