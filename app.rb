@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'sinatra/flash'
 require './lib/space'
 require './lib/user'
+require 'date'
 
 class LairBnB < Sinatra::Base
 
@@ -79,7 +80,10 @@ class LairBnB < Sinatra::Base
 
   post '/spaces/pick_a_date' do
     @lair = Space.specific_space(params[:id])
-    @available_days = @lair.availability(11, 2020)
+    @month = Time.now.month
+    @month_text = Time.now.strftime("%B")
+    @year = Time.now.year
+    @available_days = @lair.availability(@month, @year)
     erb :pick_a_date
   end
 
