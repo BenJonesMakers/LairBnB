@@ -88,7 +88,8 @@ class LairBnB < Sinatra::Base
   end
 
   post '/spaces/requests' do
-    p params
+    @lair = Space.specific_space(params[:id])
+    @request_date = params[:days] + " " + params[:month] + " " + params[:year]
     erb :requests
   end
 
