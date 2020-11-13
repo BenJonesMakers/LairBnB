@@ -87,8 +87,12 @@ class LairBnB < Sinatra::Base
     erb :pick_a_date
   end
 
-  post '/space/request_lair' do
+  post '/spaces/requests' do
     p params
+    erb :requests
+  end
+
+  get '/spaces/requests' do
     erb :requests
   end
 
