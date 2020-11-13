@@ -1,20 +1,48 @@
-<h1>Sign up here</h1>
 
-<form action="/user" method="post">
-  <input type="text" name="email" placeholder="Enter email" required="required"><br>
-  <input type="password" name="password" placeholder="password" required="required" />
-  <input type="password" name="password_confirmation" placeholder="Confirm Password" required="required" >
-  <input type="submit" value="Sign up"/>
-</form>
+<div class="signup_bg">
+<head><link rel="stylesheet" href="/css/users/signup.css"></head>
+
+  <form class="scary">
+    <h1>
+      <br>
+      <span> Dare to Enter the Lair </span>
+      <br>
+      <br> Sign up
+    </h1>
+  </form>
+
+  <form action="/user" method="post" form class ="signup">
+      <ul>
+        <li>
+          <label for = "name"> Email </label>
+          <input type="text" name="email" required="required"><br>
+          <span> Enter your Email Address Here </span>
+        </li>
+        <li>
+          <label for = "name"> Password </label>
+          <input type="password" name="password" required="required" />
+          <span> Enter your Password Here </span>
+        </li>
+        <li>
+          <label for = "name"> Confirm Password</label>
+          <input type="password" name="password_confirmation" required="required" >
+          <span> Please Confirm Your Password </span>
+        </li>
+        <input type="submit" value="Sign up"/>
+      </ul>
+  </form>
 
 
-<form action="/login">
-    <button class="submit-button">Login Page</button>
-</form>
+   <form action="/login" form class ="go_login">
+     <input type="submit" value="Login Here"/>
+   </form>
 
-<% flash.keys.each do |type| %>
-  <div data-alert class="flash <%= type %> alert-box radius">
-    <%= flash[type] %>
-    <a href="#" class="close">&times;</a>
-  </div>
-<% end %>
+
+
+  <% flash.keys.each do |type| %>
+    <div data-alert class="flash <%= type %> alert-box radius">
+      <%= flash[type] %>
+      <a href="#" class="close">&times;</a>
+    </div>
+  <% end %>
+</div>

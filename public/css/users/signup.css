@@ -1,0 +1,189 @@
+@import url(https://fonts.googleapis.com/css?family=Denk+One);
+
+@dark-gray: #212121;
+
+@red: 255;
+@green: 255;
+@blue: 255;
+
+body {
+  background-color: @dark-gray;
+}
+
+.scary h1 {
+  color: #E26427;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  font-family: 'Denk One', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 4em;
+  text-align: center;
+}
+
+.scary_login h1 {
+  color: #E26427;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  font-family: 'Denk One', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 4em;
+  text-align: center;
+}
+
+.scary span {
+  font-size: 0.4em;
+  color: white;
+  text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+}
+
+.scary_login span {
+  font-size: 0.4em;
+  color: white;
+  text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+}
+
+.login_bg {
+  /* The image used */
+  background-image: url("https://stuffershack.com/wp-content/uploads/2017/07/free-hugs.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+
+
+.signup_bg {
+  /* The image used */
+  background-image: url("https://jmc813.files.wordpress.com/2013/08/101-dark-staircase.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*
+################################################ */
+
+.signup{
+	max-width:400px;
+	margin:50px auto;
+	/* background:#fff; */
+	border-radius:2px;
+	padding:20px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.signup ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+
+}
+
+.signup li {
+  display: block;
+  padding: 9px;
+  border:1px solid #DDDDDD;
+  margin-bottom: 30px;
+  border-radius: 3px;
+}
+
+.signup li > label{
+	display: block;
+	float: left;
+	margin-top: -19px;
+	background: #FFFFFF;
+  border-radius: 3px;
+	height: 14px;
+	padding: 2px 5px 4px 5px;
+	color: #E26427;
+	font-size: 14px;
+	overflow: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.signup li > span{
+	background: #F3F3F3;
+	display: block;
+	padding: 3px;
+	margin: 0 -9px -9px -9px;
+	text-align: center;
+  color: #E26427;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+
+.signup input[type="text"],
+.signup input[type="password"],
+.signup select
+{
+	width: 100%;
+	outline: none;
+	border: none;
+	height: 25px;
+	padding: 0;
+	line-height: 25px;
+	font-size: 16px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+  background: transparent;
+  color: white;
+
+
+}
+
+.signup input[type="submit"]{
+	background: #E26427;
+	padding: 10px 180px 10px 180px;
+  margin-left: auto;
+	border-radius: 3px;
+	color: #D2E2FF;
+  display: inline-block;
+
+}
+
+.signup input[type="submit"]:hover {
+	background:rgba(91,91,91,0.77);
+	color:#fff;
+}
+
+/*
+################################################ */
+
+.go_login{
+	max-width:400px;
+	margin:50px auto;
+	/* background:#fff; */
+	border-radius:2px;
+	padding:20px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.go_login input[type="submit"]{
+
+	padding: 10px 110px 10px 110px;
+	border-radius: 3px;
+	color: #D2E2FF;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  /* background: #333333; */
+  text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+  color: #FFFFFF;
+  background:rgba(91,91,91,0.77);
+  font-size: 2em;
+
+}
+
+.go_login input[type="submit"]:hover {
+  background:rgba(95,95,95,0.85);
+	color:#fff;
+}
