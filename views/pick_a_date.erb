@@ -17,6 +17,7 @@
   <div class="container">
     <div class="lairs">
       <h1>Lair: <%= @lair.name %></h1>
+      <h4><%= @lair.description %></h4>
         <form action="/spaces/requests" method="post">
           <h2> Available days in <%= @month_text %>, <%= @year %> </h2>
           <h3>Pick a date: </<h3>

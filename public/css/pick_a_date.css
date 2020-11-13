@@ -18,6 +18,10 @@ body { background-color: lightblue;}
   background-image: url("/images/bat_cave.png");
 }
 
+.hell_hall {
+  background-image: url("/images/hell_hall.jpg");
+}
+
 .nav {
   list-style-type: none;
   margin: 0;

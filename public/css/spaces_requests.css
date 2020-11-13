@@ -1,0 +1,62 @@
+body { background-color: lightblue;}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FF9900
+}
+
+/* .made_requests{
+    float: left;
+}
+.made_requests_details {
+  float: left;
+  background-color: #FF9900;
+  width: 40%;
+  height: auto;
+  }
+
+.received_requests{
+  float: left;
+}
+
+
+.received_requests_details{
+  float: right;
+  background-color: #FF9900;
+  width: 40%;
+  height: auto;
+} */
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 80px 200px;
+  grid-gap: 10px;
+  background-color: blue;
+  padding: 10px
+}
+
+.grid-container > .made {
+  background-color: lightblue;
+  text-align: left;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.grid-container > .received {
+  background-color: lightblue;
+  text-align: left;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.grid-container > div {
+  background-color: lightblue;
+  text-align: left;
+  padding: 20px 0;
+  font-size: 30px;
+}
